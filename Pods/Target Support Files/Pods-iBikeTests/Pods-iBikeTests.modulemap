@@ -1,0 +1,6 @@
+framework module Pods_iBikeTests {
+  umbrella header "Pods-iBikeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

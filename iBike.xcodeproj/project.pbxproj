@@ -1,0 +1,979 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		482197BD888C2EB4353DD54D /* Pods_iBike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFCB0DD87F5F62F679BE00F /* Pods_iBike.framework */; };
+		78005BA224ABF88200AEF34C /* NeabyStationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78005BA124ABF88200AEF34C /* NeabyStationsViewModel.swift */; };
+		78005BA424AC2A6B00AEF34C /* NearbyStationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78005BA324AC2A6B00AEF34C /* NearbyStationTableViewCell.swift */; };
+		784BF03424ABA9740050A129 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BF03324ABA9740050A129 /* Request.swift */; };
+		784BF03824ABA9FC0050A129 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BF03724ABA9FC0050A129 /* NetworkProvider.swift */; };
+		784BF03A24ABAA190050A129 /* RemoteNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BF03924ABAA190050A129 /* RemoteNetworkProvider.swift */; };
+		784BF03C24ABAA450050A129 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BF03B24ABAA450050A129 /* Service.swift */; };
+		784BF03E24ABAA600050A129 /* CitiBikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784BF03D24ABAA600050A129 /* CitiBikeService.swift */; };
+		788FBEF124AC2E6B00F4420A /* CLLocation+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788FBEF024AC2E6B00F4420A /* CLLocation+Convenience.swift */; };
+		788FBEF524AC3F9200F4420A /* NearbyStationsSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788FBEF424AC3F9200F4420A /* NearbyStationsSectionModel.swift */; };
+		788FBEFA24AC5A8E00F4420A /* StationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788FBEF924AC5A8E00F4420A /* StationDetailsViewController.swift */; };
+		788FBEFC24AC5A9A00F4420A /* StationDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788FBEFB24AC5A9A00F4420A /* StationDetailsViewModel.swift */; };
+		788FBF0324AD1D4300F4420A /* DirectionStepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788FBF0224AD1D4300F4420A /* DirectionStepTableViewCell.swift */; };
+		788FBF0524AD1D5C00F4420A /* StationDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788FBF0424AD1D5C00F4420A /* StationDetailTableViewCell.swift */; };
+		788FBF0724AD1E1300F4420A /* StationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788FBF0624AD1E1300F4420A /* StationDetailViewModel.swift */; };
+		788FBF0924AD1E1D00F4420A /* DirectionStepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788FBF0824AD1E1D00F4420A /* DirectionStepViewModel.swift */; };
+		788FBF0C24AD1F7600F4420A /* CLLocationDistance+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788FBF0B24AD1F7600F4420A /* CLLocationDistance+Convenience.swift */; };
+		788FBF0E24AD250E00F4420A /* StationDetailsSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788FBF0D24AD250E00F4420A /* StationDetailsSectionModel.swift */; };
+		788FBF1424AD29F100F4420A /* Reactive+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788FBF1324AD29F100F4420A /* Reactive+UIViewController.swift */; };
+		788FBF1724AD2C3900F4420A /* PublishRelay+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788FBF1624AD2C3900F4420A /* PublishRelay+Convenience.swift */; };
+		788FBF1924AD42FB00F4420A /* NearbyStationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788FBF1824AD42FB00F4420A /* NearbyStationViewModel.swift */; };
+		789F74FD24B525A600536FDB /* LocationManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789F74FC24B525A600536FDB /* LocationManaging.swift */; };
+		789F74FF24B525CC00536FDB /* MockLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789F74FE24B525CC00536FDB /* MockLocationManager.swift */; };
+		789F750324B661AB00536FDB /* RootViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789F750224B661AB00536FDB /* RootViewModelTests.swift */; };
+		789F750624B665A900536FDB /* LocationPromptViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789F750524B665A900536FDB /* LocationPromptViewModelTests.swift */; };
+		789F750924B6672D00536FDB /* NearbyStationsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789F750824B6672D00536FDB /* NearbyStationsViewModelTests.swift */; };
+		789F750B24B6722700536FDB /* NearbyStationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789F750A24B6722700536FDB /* NearbyStationViewModelTests.swift */; };
+		789F750E24B673BC00536FDB /* StationDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789F750D24B673BC00536FDB /* StationDetailsViewModelTests.swift */; };
+		78CB2A3024ABAD220086A885 /* CitiBikeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB2A2F24ABAD220086A885 /* CitiBikeData.swift */; };
+		78CB2A3224ABAD7F0086A885 /* CitiBikeDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB2A3124ABAD7F0086A885 /* CitiBikeDataContainer.swift */; };
+		78CB2A3624ABADBA0086A885 /* CitiBikeStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB2A3524ABADBA0086A885 /* CitiBikeStation.swift */; };
+		78CB2A3A24ABBA6B0086A885 /* CitiBikeDataContainer.json in Resources */ = {isa = PBXBuildFile; fileRef = 78CB2A3924ABBA6B0086A885 /* CitiBikeDataContainer.json */; };
+		78CB2A3D24ABBAEE0086A885 /* LocalNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB2A3C24ABBAEE0086A885 /* LocalNetworkProvider.swift */; };
+		78CB2A3F24ABBEAC0086A885 /* CitiBikeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB2A3E24ABBEAC0086A885 /* CitiBikeServiceTests.swift */; };
+		78CB2A4224ABC61B0086A885 /* LocationPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB2A4124ABC61B0086A885 /* LocationPromptViewController.swift */; };
+		78CB2A4424ABC6280086A885 /* LocationPromptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB2A4324ABC6280086A885 /* LocationPromptViewModel.swift */; };
+		78CB2A4724ABC7B30086A885 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB2A4624ABC7B30086A885 /* ViewModelProtocol.swift */; };
+		78CB2A4A24ABC8670086A885 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB2A4924ABC8670086A885 /* LocationManager.swift */; };
+		78CB2A4E24ABD30B0086A885 /* UIColor+iBikeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB2A4D24ABD30B0086A885 /* UIColor+iBikeColors.swift */; };
+		78CB2A5024ABD31A0086A885 /* UIColor+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB2A4F24ABD31A0086A885 /* UIColor+Convenience.swift */; };
+		78CB2A5424ABDA540086A885 /* UIImage+ImageLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB2A5324ABDA540086A885 /* UIImage+ImageLiterals.swift */; };
+		78CB2A5624ABE7520086A885 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB2A5524ABE7520086A885 /* RootViewController.swift */; };
+		78CB2A5824ABE75D0086A885 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB2A5724ABE75D0086A885 /* RootViewModel.swift */; };
+		78CB2A5C24ABE7BC0086A885 /* NearbyStationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB2A5B24ABE7BC0086A885 /* NearbyStationsViewController.swift */; };
+		78CCDCA124ABA27E00804D40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CCDCA024ABA27E00804D40 /* AppDelegate.swift */; };
+		78CCDCAA24ABA28900804D40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78CCDCA924ABA28900804D40 /* Assets.xcassets */; };
+		78CCDCAD24ABA28900804D40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78CCDCAB24ABA28900804D40 /* LaunchScreen.storyboard */; };
+		78CCDCB824ABA28A00804D40 /* iBikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CCDCB724ABA28A00804D40 /* iBikeTests.swift */; };
+		EB97833B68D9D680907064A3 /* Pods_iBikeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7F1D8E5AD9D962A7A69DB0 /* Pods_iBikeTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		78CCDCB424ABA28A00804D40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78CCDC9524ABA27E00804D40 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78CCDC9C24ABA27E00804D40;
+			remoteInfo = iBike;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09A14CCB64FED85660E78B87 /* Pods-iBike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBike.debug.xcconfig"; path = "Target Support Files/Pods-iBike/Pods-iBike.debug.xcconfig"; sourceTree = "<group>"; };
+		3F45B2C26464BA6079736F4E /* Pods-iBikeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBikeTests.debug.xcconfig"; path = "Target Support Files/Pods-iBikeTests/Pods-iBikeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		78005BA124ABF88200AEF34C /* NeabyStationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeabyStationsViewModel.swift; sourceTree = "<group>"; };
+		78005BA324AC2A6B00AEF34C /* NearbyStationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyStationTableViewCell.swift; sourceTree = "<group>"; };
+		784BF03324ABA9740050A129 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		784BF03724ABA9FC0050A129 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		784BF03924ABAA190050A129 /* RemoteNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteNetworkProvider.swift; sourceTree = "<group>"; };
+		784BF03B24ABAA450050A129 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		784BF03D24ABAA600050A129 /* CitiBikeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiBikeService.swift; sourceTree = "<group>"; };
+		788FBEF024AC2E6B00F4420A /* CLLocation+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Convenience.swift"; sourceTree = "<group>"; };
+		788FBEF424AC3F9200F4420A /* NearbyStationsSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyStationsSectionModel.swift; sourceTree = "<group>"; };
+		788FBEF924AC5A8E00F4420A /* StationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailsViewController.swift; sourceTree = "<group>"; };
+		788FBEFB24AC5A9A00F4420A /* StationDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailsViewModel.swift; sourceTree = "<group>"; };
+		788FBF0224AD1D4300F4420A /* DirectionStepTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionStepTableViewCell.swift; sourceTree = "<group>"; };
+		788FBF0424AD1D5C00F4420A /* StationDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailTableViewCell.swift; sourceTree = "<group>"; };
+		788FBF0624AD1E1300F4420A /* StationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailViewModel.swift; sourceTree = "<group>"; };
+		788FBF0824AD1E1D00F4420A /* DirectionStepViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionStepViewModel.swift; sourceTree = "<group>"; };
+		788FBF0B24AD1F7600F4420A /* CLLocationDistance+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationDistance+Convenience.swift"; sourceTree = "<group>"; };
+		788FBF0D24AD250E00F4420A /* StationDetailsSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailsSectionModel.swift; sourceTree = "<group>"; };
+		788FBF1324AD29F100F4420A /* Reactive+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reactive+UIViewController.swift"; sourceTree = "<group>"; };
+		788FBF1624AD2C3900F4420A /* PublishRelay+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PublishRelay+Convenience.swift"; sourceTree = "<group>"; };
+		788FBF1824AD42FB00F4420A /* NearbyStationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyStationViewModel.swift; sourceTree = "<group>"; };
+		789F74FC24B525A600536FDB /* LocationManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManaging.swift; sourceTree = "<group>"; };
+		789F74FE24B525CC00536FDB /* MockLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationManager.swift; sourceTree = "<group>"; };
+		789F750224B661AB00536FDB /* RootViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModelTests.swift; sourceTree = "<group>"; };
+		789F750524B665A900536FDB /* LocationPromptViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPromptViewModelTests.swift; sourceTree = "<group>"; };
+		789F750824B6672D00536FDB /* NearbyStationsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyStationsViewModelTests.swift; sourceTree = "<group>"; };
+		789F750A24B6722700536FDB /* NearbyStationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyStationViewModelTests.swift; sourceTree = "<group>"; };
+		789F750D24B673BC00536FDB /* StationDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		78CB2A2F24ABAD220086A885 /* CitiBikeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiBikeData.swift; sourceTree = "<group>"; };
+		78CB2A3124ABAD7F0086A885 /* CitiBikeDataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiBikeDataContainer.swift; sourceTree = "<group>"; };
+		78CB2A3524ABADBA0086A885 /* CitiBikeStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiBikeStation.swift; sourceTree = "<group>"; };
+		78CB2A3924ABBA6B0086A885 /* CitiBikeDataContainer.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CitiBikeDataContainer.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
+		78CB2A3C24ABBAEE0086A885 /* LocalNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkProvider.swift; sourceTree = "<group>"; };
+		78CB2A3E24ABBEAC0086A885 /* CitiBikeServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiBikeServiceTests.swift; sourceTree = "<group>"; };
+		78CB2A4124ABC61B0086A885 /* LocationPromptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPromptViewController.swift; sourceTree = "<group>"; };
+		78CB2A4324ABC6280086A885 /* LocationPromptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPromptViewModel.swift; sourceTree = "<group>"; };
+		78CB2A4624ABC7B30086A885 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		78CB2A4924ABC8670086A885 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		78CB2A4D24ABD30B0086A885 /* UIColor+iBikeColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+iBikeColors.swift"; sourceTree = "<group>"; };
+		78CB2A4F24ABD31A0086A885 /* UIColor+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Convenience.swift"; sourceTree = "<group>"; };
+		78CB2A5324ABDA540086A885 /* UIImage+ImageLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ImageLiterals.swift"; sourceTree = "<group>"; };
+		78CB2A5524ABE7520086A885 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		78CB2A5724ABE75D0086A885 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		78CB2A5B24ABE7BC0086A885 /* NearbyStationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyStationsViewController.swift; sourceTree = "<group>"; };
+		78CCDC9D24ABA27E00804D40 /* iBike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBike.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		78CCDCA024ABA27E00804D40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		78CCDCA924ABA28900804D40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		78CCDCAC24ABA28900804D40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		78CCDCAE24ABA28900804D40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78CCDCB324ABA28A00804D40 /* iBikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iBikeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78CCDCB724ABA28A00804D40 /* iBikeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iBikeTests.swift; sourceTree = "<group>"; };
+		78CCDCB924ABA28A00804D40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EFCB0DD87F5F62F679BE00F /* Pods_iBike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iBike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95BC71843CEBDA5C44598875 /* Pods-iBikeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBikeTests.release.xcconfig"; path = "Target Support Files/Pods-iBikeTests/Pods-iBikeTests.release.xcconfig"; sourceTree = "<group>"; };
+		A257BCA6C738C16EFE643B2A /* Pods-iBike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBike.release.xcconfig"; path = "Target Support Files/Pods-iBike/Pods-iBike.release.xcconfig"; sourceTree = "<group>"; };
+		AD7F1D8E5AD9D962A7A69DB0 /* Pods_iBikeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iBikeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		78CCDC9A24ABA27E00804D40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				482197BD888C2EB4353DD54D /* Pods_iBike.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78CCDCB024ABA28A00804D40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB97833B68D9D680907064A3 /* Pods_iBikeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		78005BA724AC2A7F00AEF34C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				78005BA324AC2A6B00AEF34C /* NearbyStationTableViewCell.swift */,
+				788FBF1824AD42FB00F4420A /* NearbyStationViewModel.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		784BF02524ABA5120050A129 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				78CCDCA024ABA27E00804D40 /* AppDelegate.swift */,
+				784BF02F24ABA8E90050A129 /* Extensions */,
+				784BF02624ABA5220050A129 /* Features */,
+				78CB2A4524ABC7A90086A885 /* Generic */,
+				78CB2A4824ABC85E0086A885 /* Managers */,
+				784BF02724ABA5290050A129 /* Models */,
+				784BF02824ABA5320050A129 /* Networking */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		784BF02624ABA5220050A129 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				788FBEF824AC5A5600F4420A /* StationDetails */,
+				78CB2A4024ABC5980086A885 /* LocationPrompt */,
+				78CB2A5A24ABE7B20086A885 /* NearbyStations */,
+				78CB2A5924ABE7710086A885 /* Root */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		784BF02724ABA5290050A129 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				78CB2A2F24ABAD220086A885 /* CitiBikeData.swift */,
+				78CB2A3124ABAD7F0086A885 /* CitiBikeDataContainer.swift */,
+				78CB2A3524ABADBA0086A885 /* CitiBikeStation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		784BF02824ABA5320050A129 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				784BF03624ABA9E30050A129 /* NetworkProvider */,
+				784BF03524ABA9CD0050A129 /* Services */,
+				784BF03224ABA96B0050A129 /* Request */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		784BF02F24ABA8E90050A129 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				788FBEEF24AC2E6000F4420A /* CLLocation */,
+				788FBF0A24AD1F6800F4420A /* CLLocationDistance */,
+				788FBF1524AD2C2E00F4420A /* PublishRelay */,
+				788FBF1224AD29F100F4420A /* Reactive */,
+				78CB2A4B24ABD2870086A885 /* UIColor */,
+				78CB2A5224ABDA4A0086A885 /* UIImage */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		784BF03224ABA96B0050A129 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				784BF03324ABA9740050A129 /* Request.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		784BF03524ABA9CD0050A129 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				784BF03B24ABAA450050A129 /* Service.swift */,
+				784BF03D24ABAA600050A129 /* CitiBikeService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		784BF03624ABA9E30050A129 /* NetworkProvider */ = {
+			isa = PBXGroup;
+			children = (
+				784BF03724ABA9FC0050A129 /* NetworkProvider.swift */,
+				784BF03924ABAA190050A129 /* RemoteNetworkProvider.swift */,
+				78CB2A3C24ABBAEE0086A885 /* LocalNetworkProvider.swift */,
+			);
+			path = NetworkProvider;
+			sourceTree = "<group>";
+		};
+		788FBEEF24AC2E6000F4420A /* CLLocation */ = {
+			isa = PBXGroup;
+			children = (
+				788FBEF024AC2E6B00F4420A /* CLLocation+Convenience.swift */,
+			);
+			path = CLLocation;
+			sourceTree = "<group>";
+		};
+		788FBEF824AC5A5600F4420A /* StationDetails */ = {
+			isa = PBXGroup;
+			children = (
+				788FBEFD24AD1CAF00F4420A /* Cells */,
+				788FBF0D24AD250E00F4420A /* StationDetailsSectionModel.swift */,
+				788FBEF924AC5A8E00F4420A /* StationDetailsViewController.swift */,
+				788FBEFB24AC5A9A00F4420A /* StationDetailsViewModel.swift */,
+			);
+			path = StationDetails;
+			sourceTree = "<group>";
+		};
+		788FBEFD24AD1CAF00F4420A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				788FBF0224AD1D4300F4420A /* DirectionStepTableViewCell.swift */,
+				788FBF0824AD1E1D00F4420A /* DirectionStepViewModel.swift */,
+				788FBF0424AD1D5C00F4420A /* StationDetailTableViewCell.swift */,
+				788FBF0624AD1E1300F4420A /* StationDetailViewModel.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		788FBF0A24AD1F6800F4420A /* CLLocationDistance */ = {
+			isa = PBXGroup;
+			children = (
+				788FBF0B24AD1F7600F4420A /* CLLocationDistance+Convenience.swift */,
+			);
+			path = CLLocationDistance;
+			sourceTree = "<group>";
+		};
+		788FBF1224AD29F100F4420A /* Reactive */ = {
+			isa = PBXGroup;
+			children = (
+				788FBF1324AD29F100F4420A /* Reactive+UIViewController.swift */,
+			);
+			path = Reactive;
+			sourceTree = "<group>";
+		};
+		788FBF1524AD2C2E00F4420A /* PublishRelay */ = {
+			isa = PBXGroup;
+			children = (
+				788FBF1624AD2C3900F4420A /* PublishRelay+Convenience.swift */,
+			);
+			path = PublishRelay;
+			sourceTree = "<group>";
+		};
+		789F750024B6619200536FDB /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				789F750C24B673AE00536FDB /* StationDetails */,
+				789F750724B6671800536FDB /* NearbyStations */,
+				789F750424B6659C00536FDB /* LocationPrompt */,
+				789F750124B6619F00536FDB /* Root */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		789F750124B6619F00536FDB /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				789F750224B661AB00536FDB /* RootViewModelTests.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		789F750424B6659C00536FDB /* LocationPrompt */ = {
+			isa = PBXGroup;
+			children = (
+				789F750524B665A900536FDB /* LocationPromptViewModelTests.swift */,
+			);
+			path = LocationPrompt;
+			sourceTree = "<group>";
+		};
+		789F750724B6671800536FDB /* NearbyStations */ = {
+			isa = PBXGroup;
+			children = (
+				789F750824B6672D00536FDB /* NearbyStationsViewModelTests.swift */,
+				789F750A24B6722700536FDB /* NearbyStationViewModelTests.swift */,
+			);
+			path = NearbyStations;
+			sourceTree = "<group>";
+		};
+		789F750C24B673AE00536FDB /* StationDetails */ = {
+			isa = PBXGroup;
+			children = (
+				789F750D24B673BC00536FDB /* StationDetailsViewModelTests.swift */,
+			);
+			path = StationDetails;
+			sourceTree = "<group>";
+		};
+		78CB2A3724ABBA490086A885 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				78CB2A5124ABD9E90086A885 /* Images */,
+				78CB2A3824ABBA510086A885 /* JSON */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		78CB2A3824ABBA510086A885 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				78CB2A3924ABBA6B0086A885 /* CitiBikeDataContainer.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		78CB2A3B24ABBAE10086A885 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				78CB2A3E24ABBEAC0086A885 /* CitiBikeServiceTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		78CB2A4024ABC5980086A885 /* LocationPrompt */ = {
+			isa = PBXGroup;
+			children = (
+				78CB2A4124ABC61B0086A885 /* LocationPromptViewController.swift */,
+				78CB2A4324ABC6280086A885 /* LocationPromptViewModel.swift */,
+			);
+			path = LocationPrompt;
+			sourceTree = "<group>";
+		};
+		78CB2A4524ABC7A90086A885 /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				78CB2A4624ABC7B30086A885 /* ViewModelProtocol.swift */,
+			);
+			path = Generic;
+			sourceTree = "<group>";
+		};
+		78CB2A4824ABC85E0086A885 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				78CB2A4924ABC8670086A885 /* LocationManager.swift */,
+				789F74FC24B525A600536FDB /* LocationManaging.swift */,
+				789F74FE24B525CC00536FDB /* MockLocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		78CB2A4B24ABD2870086A885 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				78CB2A4D24ABD30B0086A885 /* UIColor+iBikeColors.swift */,
+				78CB2A4F24ABD31A0086A885 /* UIColor+Convenience.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		78CB2A5124ABD9E90086A885 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				78CCDCA924ABA28900804D40 /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		78CB2A5224ABDA4A0086A885 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				78CB2A5324ABDA540086A885 /* UIImage+ImageLiterals.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		78CB2A5924ABE7710086A885 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				78CB2A5524ABE7520086A885 /* RootViewController.swift */,
+				78CB2A5724ABE75D0086A885 /* RootViewModel.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		78CB2A5A24ABE7B20086A885 /* NearbyStations */ = {
+			isa = PBXGroup;
+			children = (
+				78005BA724AC2A7F00AEF34C /* Cells */,
+				78005BA124ABF88200AEF34C /* NeabyStationsViewModel.swift */,
+				788FBEF424AC3F9200F4420A /* NearbyStationsSectionModel.swift */,
+				78CB2A5B24ABE7BC0086A885 /* NearbyStationsViewController.swift */,
+			);
+			path = NearbyStations;
+			sourceTree = "<group>";
+		};
+		78CCDC9424ABA27E00804D40 = {
+			isa = PBXGroup;
+			children = (
+				78CCDC9F24ABA27E00804D40 /* iBike */,
+				78CCDCB624ABA28A00804D40 /* iBikeTests */,
+				78CCDC9E24ABA27E00804D40 /* Products */,
+				D9A74FA38FB0BC6313D22212 /* Pods */,
+				E92417252A3C1BA585039A45 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		78CCDC9E24ABA27E00804D40 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78CCDC9D24ABA27E00804D40 /* iBike.app */,
+				78CCDCB324ABA28A00804D40 /* iBikeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78CCDC9F24ABA27E00804D40 /* iBike */ = {
+			isa = PBXGroup;
+			children = (
+				78CB2A3724ABBA490086A885 /* Assets */,
+				784BF02524ABA5120050A129 /* Code */,
+				78CCDCAE24ABA28900804D40 /* Info.plist */,
+				78CCDCAB24ABA28900804D40 /* LaunchScreen.storyboard */,
+			);
+			path = iBike;
+			sourceTree = "<group>";
+		};
+		78CCDCB624ABA28A00804D40 /* iBikeTests */ = {
+			isa = PBXGroup;
+			children = (
+				789F750024B6619200536FDB /* Features */,
+				78CB2A3B24ABBAE10086A885 /* Services */,
+				78CCDCB724ABA28A00804D40 /* iBikeTests.swift */,
+				78CCDCB924ABA28A00804D40 /* Info.plist */,
+			);
+			path = iBikeTests;
+			sourceTree = "<group>";
+		};
+		D9A74FA38FB0BC6313D22212 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				09A14CCB64FED85660E78B87 /* Pods-iBike.debug.xcconfig */,
+				A257BCA6C738C16EFE643B2A /* Pods-iBike.release.xcconfig */,
+				3F45B2C26464BA6079736F4E /* Pods-iBikeTests.debug.xcconfig */,
+				95BC71843CEBDA5C44598875 /* Pods-iBikeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E92417252A3C1BA585039A45 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EFCB0DD87F5F62F679BE00F /* Pods_iBike.framework */,
+				AD7F1D8E5AD9D962A7A69DB0 /* Pods_iBikeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		78CCDC9C24ABA27E00804D40 /* iBike */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78CCDCBC24ABA28A00804D40 /* Build configuration list for PBXNativeTarget "iBike" */;
+			buildPhases = (
+				317504575F3B13F1C89F25DE /* [CP] Check Pods Manifest.lock */,
+				78CCDC9924ABA27E00804D40 /* Sources */,
+				78CCDC9A24ABA27E00804D40 /* Frameworks */,
+				78CCDC9B24ABA27E00804D40 /* Resources */,
+				D642C4A5F90D0A00FD70FE3A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iBike;
+			productName = iBike;
+			productReference = 78CCDC9D24ABA27E00804D40 /* iBike.app */;
+			productType = "com.apple.product-type.application";
+		};
+		78CCDCB224ABA28A00804D40 /* iBikeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78CCDCBF24ABA28A00804D40 /* Build configuration list for PBXNativeTarget "iBikeTests" */;
+			buildPhases = (
+				88FBD216A8D6F30BF7AC6184 /* [CP] Check Pods Manifest.lock */,
+				78CCDCAF24ABA28A00804D40 /* Sources */,
+				78CCDCB024ABA28A00804D40 /* Frameworks */,
+				78CCDCB124ABA28A00804D40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78CCDCB524ABA28A00804D40 /* PBXTargetDependency */,
+			);
+			name = iBikeTests;
+			productName = iBikeTests;
+			productReference = 78CCDCB324ABA28A00804D40 /* iBikeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		78CCDC9524ABA27E00804D40 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Richard Reitzfeld";
+				TargetAttributes = {
+					78CCDC9C24ABA27E00804D40 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					78CCDCB224ABA28A00804D40 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 78CCDC9C24ABA27E00804D40;
+					};
+				};
+			};
+			buildConfigurationList = 78CCDC9824ABA27E00804D40 /* Build configuration list for PBXProject "iBike" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 78CCDC9424ABA27E00804D40;
+			productRefGroup = 78CCDC9E24ABA27E00804D40 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				78CCDC9C24ABA27E00804D40 /* iBike */,
+				78CCDCB224ABA28A00804D40 /* iBikeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		78CCDC9B24ABA27E00804D40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78CB2A3A24ABBA6B0086A885 /* CitiBikeDataContainer.json in Resources */,
+				78CCDCAD24ABA28900804D40 /* LaunchScreen.storyboard in Resources */,
+				78CCDCAA24ABA28900804D40 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78CCDCB124ABA28A00804D40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		317504575F3B13F1C89F25DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iBike-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88FBD216A8D6F30BF7AC6184 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iBikeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D642C4A5F90D0A00FD70FE3A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iBike/Pods-iBike-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iBike/Pods-iBike-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iBike/Pods-iBike-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		78CCDC9924ABA27E00804D40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				788FBEFA24AC5A8E00F4420A /* StationDetailsViewController.swift in Sources */,
+				784BF03824ABA9FC0050A129 /* NetworkProvider.swift in Sources */,
+				788FBF0524AD1D5C00F4420A /* StationDetailTableViewCell.swift in Sources */,
+				78CB2A5824ABE75D0086A885 /* RootViewModel.swift in Sources */,
+				78CB2A3D24ABBAEE0086A885 /* LocalNetworkProvider.swift in Sources */,
+				788FBF1424AD29F100F4420A /* Reactive+UIViewController.swift in Sources */,
+				784BF03C24ABAA450050A129 /* Service.swift in Sources */,
+				788FBEF524AC3F9200F4420A /* NearbyStationsSectionModel.swift in Sources */,
+				784BF03A24ABAA190050A129 /* RemoteNetworkProvider.swift in Sources */,
+				788FBF0924AD1E1D00F4420A /* DirectionStepViewModel.swift in Sources */,
+				78CB2A4A24ABC8670086A885 /* LocationManager.swift in Sources */,
+				788FBF0C24AD1F7600F4420A /* CLLocationDistance+Convenience.swift in Sources */,
+				78CB2A5C24ABE7BC0086A885 /* NearbyStationsViewController.swift in Sources */,
+				784BF03424ABA9740050A129 /* Request.swift in Sources */,
+				78005BA224ABF88200AEF34C /* NeabyStationsViewModel.swift in Sources */,
+				789F74FF24B525CC00536FDB /* MockLocationManager.swift in Sources */,
+				788FBF0724AD1E1300F4420A /* StationDetailViewModel.swift in Sources */,
+				784BF03E24ABAA600050A129 /* CitiBikeService.swift in Sources */,
+				788FBF0324AD1D4300F4420A /* DirectionStepTableViewCell.swift in Sources */,
+				78CB2A4E24ABD30B0086A885 /* UIColor+iBikeColors.swift in Sources */,
+				78CB2A5624ABE7520086A885 /* RootViewController.swift in Sources */,
+				789F74FD24B525A600536FDB /* LocationManaging.swift in Sources */,
+				788FBEFC24AC5A9A00F4420A /* StationDetailsViewModel.swift in Sources */,
+				78CCDCA124ABA27E00804D40 /* AppDelegate.swift in Sources */,
+				78CB2A4424ABC6280086A885 /* LocationPromptViewModel.swift in Sources */,
+				78CB2A3024ABAD220086A885 /* CitiBikeData.swift in Sources */,
+				788FBEF124AC2E6B00F4420A /* CLLocation+Convenience.swift in Sources */,
+				78CB2A5424ABDA540086A885 /* UIImage+ImageLiterals.swift in Sources */,
+				788FBF0E24AD250E00F4420A /* StationDetailsSectionModel.swift in Sources */,
+				788FBF1724AD2C3900F4420A /* PublishRelay+Convenience.swift in Sources */,
+				78CB2A4724ABC7B30086A885 /* ViewModelProtocol.swift in Sources */,
+				78CB2A3224ABAD7F0086A885 /* CitiBikeDataContainer.swift in Sources */,
+				78005BA424AC2A6B00AEF34C /* NearbyStationTableViewCell.swift in Sources */,
+				78CB2A3624ABADBA0086A885 /* CitiBikeStation.swift in Sources */,
+				78CB2A4224ABC61B0086A885 /* LocationPromptViewController.swift in Sources */,
+				78CB2A5024ABD31A0086A885 /* UIColor+Convenience.swift in Sources */,
+				788FBF1924AD42FB00F4420A /* NearbyStationViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78CCDCAF24ABA28A00804D40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				789F750924B6672D00536FDB /* NearbyStationsViewModelTests.swift in Sources */,
+				78CCDCB824ABA28A00804D40 /* iBikeTests.swift in Sources */,
+				789F750B24B6722700536FDB /* NearbyStationViewModelTests.swift in Sources */,
+				789F750E24B673BC00536FDB /* StationDetailsViewModelTests.swift in Sources */,
+				78CB2A3F24ABBEAC0086A885 /* CitiBikeServiceTests.swift in Sources */,
+				789F750324B661AB00536FDB /* RootViewModelTests.swift in Sources */,
+				789F750624B665A900536FDB /* LocationPromptViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		78CCDCB524ABA28A00804D40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78CCDC9C24ABA27E00804D40 /* iBike */;
+			targetProxy = 78CCDCB424ABA28A00804D40 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		78CCDCAB24ABA28900804D40 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78CCDCAC24ABA28900804D40 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		78CCDCBA24ABA28A00804D40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		78CCDCBB24ABA28A00804D40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		78CCDCBD24ABA28A00804D40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09A14CCB64FED85660E78B87 /* Pods-iBike.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5JUTPUCSKB;
+				INFOPLIST_FILE = iBike/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Richard-Reitzfeld.iBike";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		78CCDCBE24ABA28A00804D40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A257BCA6C738C16EFE643B2A /* Pods-iBike.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5JUTPUCSKB;
+				INFOPLIST_FILE = iBike/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Richard-Reitzfeld.iBike";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		78CCDCC024ABA28A00804D40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F45B2C26464BA6079736F4E /* Pods-iBikeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5JUTPUCSKB;
+				INFOPLIST_FILE = iBikeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Richard-Reitzfeld.iBikeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iBike.app/iBike";
+			};
+			name = Debug;
+		};
+		78CCDCC124ABA28A00804D40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95BC71843CEBDA5C44598875 /* Pods-iBikeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5JUTPUCSKB;
+				INFOPLIST_FILE = iBikeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Richard-Reitzfeld.iBikeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iBike.app/iBike";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		78CCDC9824ABA27E00804D40 /* Build configuration list for PBXProject "iBike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78CCDCBA24ABA28A00804D40 /* Debug */,
+				78CCDCBB24ABA28A00804D40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78CCDCBC24ABA28A00804D40 /* Build configuration list for PBXNativeTarget "iBike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78CCDCBD24ABA28A00804D40 /* Debug */,
+				78CCDCBE24ABA28A00804D40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78CCDCBF24ABA28A00804D40 /* Build configuration list for PBXNativeTarget "iBikeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78CCDCC024ABA28A00804D40 /* Debug */,
+				78CCDCC124ABA28A00804D40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 78CCDC9524ABA27E00804D40 /* Project object */;
+}
